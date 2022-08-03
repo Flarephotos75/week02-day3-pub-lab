@@ -1,5 +1,8 @@
+from http import client
 import unittest
+from classes.customer import Customer
 from classes.pub import Pub
+from tests.customer_test import TestCustomer
 
 class TestPub(unittest.TestCase):
     
@@ -29,3 +32,8 @@ class TestPub(unittest.TestCase):
 
     def test_total_stock_value_food(self):
         self.assertEqual(65, self.pub.total_stock_value_food)
+
+    def test_age_check(self):
+        client = Customer(self)
+        age_check = client.age_check(customer.john)
+        self.assertEqual(True, age_check)

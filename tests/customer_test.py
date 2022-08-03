@@ -19,3 +19,7 @@ class TestCustomer(unittest.TestCase):
 
     def test_get_drunken_level(self): 
         self.assertEqual(0, self.stephen.drunken_level)
+
+    # def test_age_check(self):
+    #     age_check = self.john.age_check()
+    #     self.assertEqual(True, age_check)
